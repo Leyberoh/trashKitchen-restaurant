@@ -1,8 +1,11 @@
 const express = require("express");
+const hbs = require("hbs"); // require hbs to use partials
 const app = express();
 
 app.set("views", __dirname + "/views"); //tells our Express app where to look for our views
 app.set("view engine", "hbs"); //sets HBS as the template engine
+
+hbs.registerPartials(__dirname + "/views/partials"); //tell HBS which directory we use for partials
 
 // Makes the files in public available for the browser
 app.use(express.static("public"));
