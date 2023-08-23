@@ -13,14 +13,14 @@ app.use(express.static("public"));
 // app.get(path, code)
 app.get("/", (req, res, next) => {
   const homePage = {
-    title: "Home",
+    metatitle: "Home",
   };
   res.render("homepage", homePage);
 });
 
 app.get("/contact", (req, res, next) => {
   const contactPage = {
-    title: "Contact",
+    metatitle: "Contact",
   };
   res.render("contact", contactPage);
 });
@@ -30,6 +30,7 @@ app.get("/pizzas/margarita", (req, res, next) => {
 
   const dataMargarita = {
     title: "Pizza Margarita",
+    metatitle: "Pizza Margarita",
     price: 12,
     recommendedDrink: "beer",
     imageFile: "pizza-margarita.jpg",
@@ -55,6 +56,7 @@ app.get("/pizzas/margarita", (req, res, next) => {
 app.get("/pizzas/veggie", (req, res, next) => {
   const dataVeggie = {
     title: "Veggie Pizza",
+    metatitle: "Veggie Pizza",
     price: 15,
     recommendedDrink: "power smoothie",
     imageFile: "pizza-veggie.jpg",
@@ -80,9 +82,10 @@ app.get("/pizzas/veggie", (req, res, next) => {
 app.get("/pizzas/seafood", (req, res, next) => {
   const dataSeafood = {
     title: "Seafood Pizza",
+    metatitle: "Seafood Pizza",
     recommendedDrink: "white wine",
     imageFile: "pizza-seafood.jpg",
-    //ingredients: ["tomato sauce", "garlic", "prawn"],
+    ingredients: ["tomato sauce", "garlic", "prawn"],
   };
 
   res.render("product", dataSeafood);
