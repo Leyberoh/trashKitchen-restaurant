@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{#if title}}
+    <title>{{title}}</title>
+    {{else}}
+    <title>TechTrash Pizzas</title>
+    {{/if}}
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/pizzas/margarita">Margarita</a>
+      <a href="/pizzas/veggie">Veggie</a>
+      <a href="/pizzas/seafood">Seafood</a>
+      <a href="/contact">Contact</a>
+    </nav>
+    
+    {{{body}}}
+
+    <footer>
+        Best pizzas in town
+    </footer>
+</body>
+</html>
